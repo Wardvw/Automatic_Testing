@@ -22,7 +22,7 @@ describe("Horizontal Slider functionality", () => {
         cy.get('input[type="range"]').as('slider'); // Getting the slider input element and giving it an alias
 
         for (let value = 0; value <= 5; value++) {
-            cy.get('@slider').invoke('val', value).trigger('input'); // Changing slider value //* Instead of sliding the slider, which changes the sliders value, we manipulate the value, causing it to slide
+            cy.get('@slider').invoke('val', value).trigger('input'); // Changing slider value //* Instead of sliding the slider, which changes the sliders value, we manipulate the value, causing the slider to slide
             cy.get('@slider').should('have.value', value.toString()); // Verifying slider value
         }
     });
