@@ -1,10 +1,12 @@
+//TODO: Logout basic auth: Auto-decline popup prompt
+//TODO: Horizontal Slider: verify slider.value==#range.value on screen
+
 describe("Basic Auth functionality", () => {
     it('Login basic auth', () => {
         cy.log('Handle basic authentication with the credentials in the URL like this: https://username:password@www.example.com/'); //clarification
         cy.visit('https://admin:admin@the-internet.herokuapp.com/basic_auth'); // Visiting the page with basic authentication
         cy.contains('Congratulations! You must have the proper credentials.').should('be.visible'); // Verifying the successful authentication message
     });
-
     it('Logout basic auth', () => {
         cy.log('Simulate logout by clearing cookies and re-authenticating'); //clarification
         cy.clearCookies(); // Clearing cookies
@@ -15,7 +17,7 @@ describe("Basic Auth functionality", () => {
 });
 
 describe("Horizontal Slider functionality", () => {
-    it('Should verify all possible slider states', () => {
+    it('Verify all possible slider states', () => {
         cy.visit('https://the-internet.herokuapp.com/horizontal_slider');
         cy.get('input[type="range"]').as('slider'); // Getting the slider input element and giving it an alias
 
@@ -27,7 +29,7 @@ describe("Horizontal Slider functionality", () => {
 });
 
 describe("Key Presses functionality", () => {
-    it('Should verify displayed key on key press', () => {
+    it('Verify displayed key on key press', () => {
         cy.visit('https://the-internet.herokuapp.com/key_presses');
         cy.get('#target').as('inputField'); // Getting the input element for typing and giving it an alias
         cy.get('@inputField').type('a'); // Typing the key 'a' into the input field
