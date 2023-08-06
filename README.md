@@ -9,12 +9,12 @@ Link: https://the-internet.herokuapp.com/
 2. Make sure you have Node.js and npm installed.
 3. Navigate to the project directory in your terminal.
 4. Run `npm install cypress` to install cypress.
-5. If that doesn't work, navigate to node_modules/.bin and `npm install cypress` there
+5. If that doesn't work, navigate to node_modules/.bin and `npm install cypress` there.
 
 ## Running Tests
 
 1. After installing dependencies, run `npx cypress open` to open the Cypress Test Runner.
-2. Choose 'E2E Testing'
+2. Choose 'E2E Testing'.
 3. Select the desired browser to run the tests.
 4. The Cypress Test Runner will open, showing the list of available test files.
 5. Choose the-Internet.spec.cy.js
@@ -34,6 +34,6 @@ This project's `.gitignore` file has been configured to exclude certain files an
 
 - `node_modules/`: Ignoring the `node_modules` directory where external dependencies are installed.
 
-##FIXME:
+## FIXME:
 
 - Popup prompt for `Basic Auth` doesn't get automatically declined. A manual click is obligatory.
