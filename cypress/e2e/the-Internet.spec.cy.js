@@ -34,7 +34,7 @@ describe("Key Presses functionality", () => {
         const keysToTest = [..."abcdefghijklmnopqrstuvwxyz0123456789"]; // List of keys to test
         keysToTest.forEach((key) => { // Loop through each key and type it, then verify the displayed result
             cy.get("@inputField").type(key); // Type the current key
-            const capitalizedKey = key.toUpperCase();
+            const capitalizedKey = key.toUpperCase(); //website only displays uppercase
             cy.get("#result").should("have.text", `You entered: ${capitalizedKey}`); // Verify the displayed key matches the pressed key
         });
     });
